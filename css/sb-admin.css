@@ -10,6 +10,18 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 
 /* Global Styles */
 
+.navbar-brand{
+  background-image: url(../img/logo-vspt-wine-group-white.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 145px;
+  height: 27px;
+  text-indent: -9999px;
+  display: block;
+  margin-top: 12px;
+  margin-left: 15px;
+}
+
 body {
   margin-top: 50px;
 }
