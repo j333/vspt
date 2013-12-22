@@ -6,120 +6,143 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Vspt Download</title>
+    <title>Blank Page - SB Admin</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Add custom CSS here #DF3F4D #333-->
+    <!-- Add custom CSS here -->
     <link href="css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <style type="text/css">
-      body { 
-        background: url(http://lacelia.com.ar/wp-content/uploads/2013/07/106.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-
-      .panel-default {
-        border-radius: 0;
-        background-color: #eee;
-        opacity: 0.95;
-        margin-top:30px;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        border: 0;
-        border-top: 5px solid #DF3F4D;
-      }
-
-      .form-group.last { margin-bottom:0px; }
-
-      #logo {
-        background-image: url(img/logo-vspt-wine-group.png);
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        height: 49px;
-        width: 260px;
-        text-indent: -9999px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .btn-success {
-        color: #FFF;
-        background-color: #333;
-        border-color: #EEE;
-      }
-
-      .btn-success:hover {
-        color: #FFF;
-        background-color: #DF3F4D;
-        border-color: transparent;
-      }
-
+    	#wrapper {
+			padding-left: 0px;
+		}
+		.brands {
+			margin-bottom:1em;
+			margin: auto;
+		}
+		@media (min-width:768px) {
+			.brands a img {
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: grayscale(100%);
+				-webkit-transition: .5s;
+				transition: .5s;
+			}
+			.brands a img:hover {
+				-webkit-filter: grayscale(0%);
+				-moz-filter: grayscale(0%);
+				filter: grayscale(0%);
+			}			
+		}
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-7">
-          <div class="panel panel-default">
-              <h1 id="logo">VSPT Downloads</h1>
-              <div class="panel-body">
-                <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                      <div class="col-sm-offset-2 col-sm-8">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-8">
-                          <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña" required="">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-8">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox"/>
-                              Recordarme
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group last">
-                        <div class="col-sm-offset-2 col-sm-8">
-                          <button type="submit" class="btn btn-success">
-                            Entrar</button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">VSPT Downloads</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          	<div class="col-sm-5 col-md-4 pull-left search">
+                <form class="navbar-form" role="search">
+                  <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" placeholder="Buscar recursos" name="srch-term" id="srch-term">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                   </div>
+                </div>
+              </form>
+          	</div>
+          	<ul class="nav navbar-nav navbar-right navbar-user">
+            	<li>
+            		<a href="#"><i class="fa fa-power-off"></i> Salir</a>
+            	</li>
+          	</ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <div class="row">
+	        <div class="col-lg-12">
+            <h1>VSPT <small>Downloads</small></h1>
+            <ol class="breadcrumb">
+              <li class="active"><i class="fa fa-home"></i> Inicio</li>
+            </ol>
+            <div class="alert alert-success alert-dismissable">
+              	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              	Bienvenido a VSPT Download, aquí encontrará todo el material de nuestras marcas. Haga click en la marca de cual necesita recursos.
+            </div>
+          </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="brand.html">
+	        		<img class="img-responsive" src="img/la-celia.jpg" alt="Responsive image">
+	        	</a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="">
+	        		<img class="img-responsive" src="img/bodega-tamari.jpg" alt="Responsive image">
+	        	</a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="">
+		        	<img class="img-responsive" src="img/san-pedro.jpg" alt="Responsive image">
+		       	</a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="">
+		        	<img class="img-responsive" src="img/casa-rivas.jpg" alt="Responsive image">
+		        </a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="">
+		        	<img class="img-responsive" src="img/leyda.jpg" alt="Responsive image">
+		        </a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="">
+		        	<img class="img-responsive" src="img/misiones-de-rengo.jpg" alt="Responsive image">
+		        </a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="">
+	        		<img class="img-responsive" src="img/santa-helena.jpg" alt="Responsive image">
+	        	</a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="">
+	        		<img class="img-responsive" src="img/tarapaca.jpg" alt="Responsive image">
+	        	</a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	       		<a href="">
+	        		<img class="img-responsive" src="img/vina-mar.jpg" alt="Responsive image">
+	        	</a>
+	        </div>
+        </div><!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
 
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.backstretch.min.js"></script>
-    <script>
-        $.backstretch([
-          "img/01.jpg",
-          "img/02.jpg",
-          "img/03.jpg"
-          ], {
-            fade: 750,
-            duration: 10000
-        });
-    </script>
 
   </body>
 </html>
