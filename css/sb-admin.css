@@ -10,6 +10,23 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 
 /* Global Styles */
 
+::-moz-selection {
+  color:#fff;
+  background: #DF3F4D;
+}
+::selection {
+  color:#fff;
+  background: #DF3F4D;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #DF3F4D;
+}
+
 .navbar-brand{
   background-image: url(../img/logo-vspt-wine-group-white.png);
   background-position: 0 0;
