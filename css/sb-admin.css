@@ -52,6 +52,11 @@ a:hover {
 
 body {
   margin-top: 50px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #wrapper {
@@ -92,6 +97,23 @@ body {
 
 .brand img{
   max-width: 120px !important;
+}
+
+.caption a {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.caption h4 {
+  margin: 0;
+}
+
+.picture {
+  height: 125px;
+  background: url(../img/file-icon-png.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Edit Below to Customize Widths > 768px */
