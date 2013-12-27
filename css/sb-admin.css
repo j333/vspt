@@ -9,6 +9,9 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 /* ATTN: This is mobile first CSS - to update 786px and up screen width use the media query near the bottom of the document! */
 
 /* Global Styles */
+.hero-widget { text-align: center; padding-top: 20px; padding-bottom: 20px; }
+.hero-widget .icon { display: block; font-size: 96px; line-height: 96px; margin-bottom: 10px; text-align: center; }
+
 .form-control {
   background-color: #F5F5F5;
   border: 1px solid #AAA;

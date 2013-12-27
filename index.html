@@ -68,6 +68,9 @@
               </form>
           	</div>
           	<ul class="nav navbar-nav navbar-right navbar-user">
+          		<li>
+            		<a href="#" data-toggle="modal" data-target="#sugerencias"><i class="fa fa-lightbulb-o"></i> Sugerencias</a>
+            	</li>
             	<li>
             		<a href="#"><i class="fa fa-power-off"></i> Salir</a>
             	</li>
@@ -76,6 +79,25 @@
       </nav>
 
       <div id="page-wrapper">
+
+      	<!-- Modal Sugerencias -->
+      	<div class="modal fade" id="sugerencias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      		<div class="modal-dialog">
+      			<div class="modal-content">
+      				<div class="modal-header">
+      					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      					<h4 class="modal-title" id="myModalLabel">Sugerencias</h4>
+      				</div>
+      				<div class="modal-body">
+      					...
+      				</div>
+      				<div class="modal-footer">
+      					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      					<button type="button" class="btn btn-primary">Enviar sugerencias</button>
+      				</div>
+      			</div><!-- /.modal-content -->
+      		</div><!-- /.modal-dialog -->
+      	</div><!-- /.modal -->
 
         <div class="row">
 	        <div class="col-lg-12">
@@ -132,6 +154,34 @@
 	       		<a href="">
 	        		<img class="img-responsive" src="img/vina-mar.jpg" alt="Responsive image">
 	        	</a>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
+	        	<a href="" data-toggle="modal" data-target="#nuevamarca">
+	       		<div class="hero-widget well well-sm">
+		                <div class="icon">
+		                     <i class="fa fa-plus-circle"></i>
+		                </div>
+		        </div>
+		        </a>
+
+				<!-- Modal -->
+				<div class="modal fade" id="nuevamarca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        <h4 class="modal-title" id="myModalLabel">Incluir una nueva marca</h4>
+				      </div>
+				      <div class="modal-body">
+				      	...
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				        <button type="button" class="btn btn-success">Crear nueva Marca</button>
+				      </div>
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
 	        </div>
         </div><!-- /.row -->
 
