@@ -37,7 +37,11 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li class="brand"><a href=""><img src="img/la-celia.jpg"></a></li>
-            <li><a href="index.html"><i class="fa fa-folder fa-fw"></i> Fichas técnicas</a></li>
+            <li>
+              <a href="index.html">
+                <i class="fa fa-folder fa-fw"></i> Fichas técnicas
+              </a>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder fa-fw"></i> Fotos</a>
               <ul class="dropdown-menu">
@@ -74,7 +78,7 @@
       </nav>
 
       <div id="page-wrapper">
-      
+
         <!-- Modal Sugerencias -->
         <div class="modal fade" id="sugerencias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -125,9 +129,51 @@
         <div class="row">
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">            
             <div class="thumbnail">
+              <div class="pull-right action-buttons">
+                <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
+                <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
+              </div>
+              <!-- Modal Eliminar Recurso -->
+              <div class="modal fade" id="eliminar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="myModalLabel">Eliminar Recurso</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>¿Esta seguro que desea borrar este recurso?</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-danger">Eliminar</button>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+              <!-- Modal Editar Recurso -->
+              <div class="modal fade" id="editar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="myModalLabel">Editar Recurso</h4>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-success">Guardar cambios</button>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
               <div class="caption">
-                <h4>Logotipo</h4>
-                <p><small>Imagen png</small></p>
+                <div class="description">
+                  <h4>Logotipo</h4>
+                  <p><small>Imagen png. Imagen con fondo transparente.</small></p>
+                </div>
                 <div class="picture" style="background-image: url(img/la-celia.jpg);">
                 </div>
                 <small>Type: png | Size: 30kb</small>
@@ -138,8 +184,10 @@
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
             <div class="thumbnail">
               <div class="caption">
-                <h4>Logotipo</h4>
-                <p><small>Imagen png</small></p>
+                <div class="description">
+                  <h4>Logotipo La Celia</h4>
+                  <p><small>Imagen png</small></p>
+                </div>
                 <div class="picture"></div>
                 <small>Type: png | Size: 30kb</small>
                 <a href="#" class="btn btn-primary btn-success"><i class="fa fa-cloud-download"></i> Download</a>
@@ -149,8 +197,10 @@
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
             <div class="thumbnail">
               <div class="caption">
-                <h4>Logotipo</h4>
-                <p><small>Imagen png</small></p>
+                <div class="description">
+                  <h4>Logotipo La Celia</h4>
+                  <p><small>Imagen png</small></p>
+                </div>
                 <div class="picture"></div>
                 <small>Type: png | Size: 30kb</small>
                 <a href="#" class="btn btn-primary btn-success"><i class="fa fa-cloud-download"></i> Download</a>
