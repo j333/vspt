@@ -21,6 +21,9 @@
 			margin: auto;
 			margin-bottom:1em;
 		}
+		.brands a:hover {
+			color: #5CB85C;
+		}
 		@media (min-width:768px) {
 			.brands a img {
 				-webkit-filter: grayscale(100%);
@@ -156,7 +159,7 @@
 	        	</a>
 	        </div>
 	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
-	        	<a href="" data-toggle="modal" data-target="#nuevamarca">
+	        	<a href="" data-toggle="modal" data-target="#agregar-marca">
 	       		<div class="hero-widget well well-sm">
 		                <div class="icon">
 		                     <i class="fa fa-plus-circle"></i>
@@ -165,19 +168,19 @@
 		        </a>
 
 				<!-- Modal -->
-				<div class="modal fade" id="nuevamarca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal fade" id="agregar-marca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				  <div class="modal-dialog">
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				        <h4 class="modal-title" id="myModalLabel">Incluir una nueva marca</h4>
+				        <h4 class="modal-title" id="myModalLabel">Agregar marca</h4>
 				      </div>
 				      <div class="modal-body">
 				      	...
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				        <button type="button" class="btn btn-success">Crear nueva Marca</button>
+				        <button type="button" class="btn btn-success">Agregar Marca</button>
 				      </div>
 				    </div><!-- /.modal-content -->
 				  </div><!-- /.modal-dialog -->
@@ -190,8 +193,10 @@
     </div><!-- /#wrapper -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/grids.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
   </body>
 </html>

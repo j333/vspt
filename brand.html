@@ -44,10 +44,12 @@
                 <li><a href="#"><i class="fa fa-folder fa-fw"></i> Bodega</a></li>
                 <li><a href="#"><i class="fa fa-folder fa-fw"></i> Viñedo</a></li>
                 <li><a href="#"><i class="fa fa-folder fa-fw"></i> Bottleshots</a></li>
+                <li><a href="" data-toggle="modal" data-target="#nueva-carpeta"><i class="fa fa-plus fa-fw"></i> Nueva carpeta</a></li>
               </ul>
             </li>
             <li class="active"><a><i class="fa fa-folder-open fa-fw"></i> Logos</a></li>
-            <li><a href="index.html"><i class="fa fa-folder fa-fw"></i> Videos</a></li>
+            <li><a href=""><i class="fa fa-folder fa-fw"></i> Videos</a></li>
+            <li><a href="" data-toggle="modal" data-target="#nueva-carpeta"><i class="fa fa-plus fa-fw"></i> Nueva carpeta</a></li>
 
           </ul>
           <div class="col-sm-5 col-md-4 pull-left search">
@@ -62,6 +64,9 @@
           </div>
           <ul class="nav navbar-nav navbar-right navbar-user">
             <li>
+              <a href="#" data-toggle="modal" data-target="#sugerencias"><i class="fa fa-lightbulb-o"></i> Sugerencias</a>
+            </li>
+            <li>
               <a href="#"><i class="fa fa-power-off"></i> Salir</a>
             </li>
           </ul>
@@ -69,6 +74,44 @@
       </nav>
 
       <div id="page-wrapper">
+      
+        <!-- Modal Sugerencias -->
+        <div class="modal fade" id="sugerencias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Sugerencias</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Enviar sugerencias</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!-- Modal Nueva Carpeta -->
+        <div class="modal fade" id="nueva-carpeta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Nueva Carpeta</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success">Crear nueva carpeta</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
         <div class="row">
           <div class="col-lg-12">
@@ -80,7 +123,7 @@
         </div><!-- /.row -->
 
         <div class="row">
-          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">            
+          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">            
             <div class="thumbnail">
               <div class="caption">
                 <h4>Logotipo</h4>
@@ -92,7 +135,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
             <div class="thumbnail">
               <div class="caption">
                 <h4>Logotipo</h4>
@@ -103,6 +146,45 @@
               </div>
             </div>
           </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
+            <div class="thumbnail">
+              <div class="caption">
+                <h4>Logotipo</h4>
+                <p><small>Imagen png</small></p>
+                <div class="picture"></div>
+                <small>Type: png | Size: 30kb</small>
+                <a href="#" class="btn btn-primary btn-success"><i class="fa fa-cloud-download"></i> Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
+            <a href="" data-toggle="modal" data-target="#agregar-recurso">
+              <div class="hero-widget well well-sm">
+                <div class="icon">
+                 <i class="fa fa-plus-circle"></i>
+               </div>
+             </div>
+           </a>
+
+           <!-- Modal -->
+           <div class="modal fade" id="agregar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Agregar recurso</h4>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-success">Agregar recurso</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        </div>
         </div><!-- /.row -->
 
       </div><!-- /#page-wrapper -->
@@ -110,8 +192,10 @@
     </div><!-- /#wrapper -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/grids.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
   </body>
 </html>
