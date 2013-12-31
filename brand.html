@@ -36,7 +36,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li class="brand"><a href=""><img src="img/la-celia.jpg"></a></li>
+            <li class="brand">
+              <div class="pull-right action-buttons">
+                <a href="" data-toggle="modal" data-target="#cambiar-imagen"><i class="fa fa-pencil fa-fw"></i></a>
+              </div>
+              <a href=""><img src="img/la-celia.jpg"></a></li>
             <li>
               <a href="index.html">
                 <i class="fa fa-folder fa-fw"></i> Fichas técnicas
@@ -79,21 +83,113 @@
 
       <div id="page-wrapper">
 
+        <!-- Modal Cambiar Imagen -->
+        <div class="modal fade" id="cambiar-imagen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form class="form-horizontal">
+              <fieldset>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Editar Marca</h4>
+              </div>
+              <div class="modal-body">
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="textinput">Marca</label>  
+                  <div class="col-md-9">
+                  <input id="textinput" name="textinput" type="text" placeholder="Nombre de la Marca" class="form-control input-md">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="textinput">Imagen</label>  
+                  <div class="col-md-9">
+                  <div class="alert alert-warning alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    Las imágenes deben ser formato .jpg con un tamaño de 200x300px.
+                  </div>
+                  <img src="img/la-celia.jpg" class="img-responsive">
+                  <input id="filebutton" name="filebutton" class="input-file" type="file">
+                  </div>
+                </div>
+
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Guardar cambios</button>
+              </div>
+              </fieldset>
+              </form>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
         <!-- Modal Sugerencias -->
         <div class="modal fade" id="sugerencias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
+              <form class="form-horizontal">
+              <fieldset>
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Sugerencias</h4>
+                <h4 class="modal-title" id="myModalLabel">Envienos sus comentarios sobre su experiencia en el sitio</h4>
               </div>
               <div class="modal-body">
-                ...
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="textinput">Comentarios</label>  
+                  <div class="col-md-9">
+                  <textarea class="form-control" id="textarea" name="textarea"></textarea>
+                  </div>
+                </div>
+
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                <label class="col-md-3 control-label" for="radios">¿Cómo califica su experiencia en el sitio?</label>
+                  <div class="col-md-9">
+                    <div class="radio">
+                      <label for="radios-0">
+                        <input type="radio" name="radios" id="radios-0" value="5" checked="checked">
+                        Excelente
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label for="radios-1">
+                        <input type="radio" name="radios" id="radios-1" value="4">
+                        Muy Buena
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label for="radios-2">
+                        <input type="radio" name="radios" id="radios-2" value="3">
+                        Buena
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label for="radios-3">
+                        <input type="radio" name="radios" id="radios-3" value="2">
+                        Mala
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label for="radios-4">
+                        <input type="radio" name="radios" id="radios-4" value="1">
+                        Pésima
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Enviar sugerencias</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Enviar sugerencias</button>
               </div>
+              </fieldset>
+              </form>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
@@ -127,48 +223,51 @@
         </div><!-- /.row -->
 
         <div class="row">
+
+          <!-- Modal Eliminar Recurso -->
+          <div class="modal fade" id="eliminar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Eliminar Recurso</h4>
+                </div>
+                <div class="modal-body">
+                  <p>¿Esta seguro que desea borrar este recurso?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-danger">Eliminar</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <!-- Modal Editar Recurso -->
+          <div class="modal fade" id="editar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Editar Recurso</h4>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-success">Guardar cambios</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+          <!-- Listado de recursos -->
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">            
             <div class="thumbnail">
               <div class="pull-right action-buttons">
                 <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
                 <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
               </div>
-              <!-- Modal Eliminar Recurso -->
-              <div class="modal fade" id="eliminar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title" id="myModalLabel">Eliminar Recurso</h4>
-                    </div>
-                    <div class="modal-body">
-                      <p>¿Esta seguro que desea borrar este recurso?</p>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                      <button type="button" class="btn btn-danger">Eliminar</button>
-                    </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-              <!-- Modal Editar Recurso -->
-              <div class="modal fade" id="editar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title" id="myModalLabel">Editar Recurso</h4>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                      <button type="button" class="btn btn-success">Guardar cambios</button>
-                    </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
               <div class="caption">
                 <div class="description">
                   <h4>Logotipo</h4>
@@ -183,6 +282,10 @@
           </div>
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
             <div class="thumbnail">
+              <div class="pull-right action-buttons">
+                <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
+                <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
+              </div>
               <div class="caption">
                 <div class="description">
                   <h4>Logotipo La Celia</h4>
@@ -196,6 +299,10 @@
           </div>
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
             <div class="thumbnail">
+              <div class="pull-right action-buttons">
+                <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
+                <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
+              </div>
               <div class="caption">
                 <div class="description">
                   <h4>Logotipo La Celia</h4>
