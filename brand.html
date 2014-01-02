@@ -33,31 +33,40 @@
         <a class="navbar-brand" href="index.html">VSPT Downloads</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav side-nav">
-          <li class="brand">
-            <div class="pull-right action-buttons">
-              <a href="" data-toggle="modal" data-target="#cambiar-imagen"><i class="fa fa-pencil fa-fw"></i></a>
-            </div>
-            <a href=""><img src="img/la-celia.jpg"></a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="brand">
+
+              <div class="pull-right dropdown opciones">
+                <!--a href="" data-toggle="modal" data-target="#modal_editar_marca"><i class="fa fa-pencil fa-fw"></i></a-->
+                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_editar_marca">Editar La Celia</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_marca">Eliminar marca</a></li>
+                </ul>
+              </div>
+
+              <a href=""><img src="img/la-celia.jpg"></a>
+			</li>
             <li>
               <a href="index.html">
                 <i class="fa fa-folder fa-fw"></i> Fichas técnicas
               </a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder fa-fw"></i> Fotos</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder fa-fw"></i> Fotos <i class="fa fa-sort-asc pull-right"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><i class="fa fa-folder fa-fw"></i> Bodega</a></li>
                 <li><a href="#"><i class="fa fa-folder fa-fw"></i> Viñedo</a></li>
                 <li><a href="#"><i class="fa fa-folder fa-fw"></i> Bottleshots</a></li>
-                <li><a href="" data-toggle="modal" data-target="#nueva-carpeta"><i class="fa fa-plus fa-fw"></i> Nueva carpeta</a></li>
+                <li><a href="" data-toggle="modal" data-target="#modal_agregar_categoria"><i class="fa fa-plus fa-fw"></i> Agregar categroría</a></li>
               </ul>
             </li>
             <li class="active"><a><i class="fa fa-folder-open fa-fw"></i> Logos</a></li>
             <li><a href=""><i class="fa fa-folder fa-fw"></i> Videos</a></li>
-            <li><a href="" data-toggle="modal" data-target="#nueva-carpeta"><i class="fa fa-plus fa-fw"></i> Nueva carpeta</a></li>
+            <li><a href="" data-toggle="modal" data-target="#modal_agregar_categoria"><i class="fa fa-plus fa-fw"></i> Agregar categroría</a></li>
 
           </ul>
           <div class="col-sm-5 col-md-4 pull-left search">
@@ -72,6 +81,9 @@
           </div>
           <ul class="nav navbar-nav navbar-right navbar-user">
             <li>
+              <a href="#"><i class="fa fa-users"></i> Usuarios</a>
+            </li>
+            <li>
               <a href="#" data-toggle="modal" data-target="#sugerencias"><i class="fa fa-lightbulb-o"></i> Sugerencias</a>
             </li>
             <li>
@@ -83,134 +95,292 @@
 
       <div id="page-wrapper">
 
-        <!-- Modal Cambiar Imagen -->
-        <div class="modal fade" id="cambiar-imagen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <!-- Modal Genérico
+          <div class="modal fade" id="modal_nombre_id" tabindex="-1" role="dialog" aria-labelledby="label_nombre_id" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="label_nombre_id">Título modal</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Acción del modal</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          /.modal -->
+
+          <!-- Modal Eliminar Marca -->
+          <div class="modal fade" id="modal_eliminar_marca" tabindex="-1" role="dialog" aria-labelledby="label_eliminar_marca" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="label_eliminar_marca">Eliminar La Celia</h4>
+                </div>
+                <div class="modal-body">
+                  <p>¿Esta seguro que desea esta marca y todo su contenido?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal_confirmar_eliminar_marca" data-dismiss="modal">Eliminar</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.modal -->
+
+          <!-- Modal Confirmar Eliminar Marca -->
+          <div class="modal fade" id="modal_confirmar_eliminar_marca" tabindex="-1" role="dialog" aria-labelledby="label_confirmar_eliminar_marca" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="label_confirmar_eliminar_marca">¿Está seguro que desea eliminar La Celia?</h4>
+                </div>
+                <div class="modal-body">
+                  <p class="modal-title" id="label_confirmar_eliminar_marca">Si elimina esta marca se eliminarán además todos los archivos que la componen, sin posibilidad de recuperación.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger">Eliminar de todas formas</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.modal -->
+        <!-- Modal Editar Marca -->
+        <div class="modal fade" id="modal_editar_marca" tabindex="-1" role="dialog" aria-labelledby="label_editar_marca" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <form class="form-horizontal">
+
                 <fieldset>
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Editar Marca</h4>
-                  </div>
-                  <div class="modal-body">
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                      <label class="col-md-3 control-label" for="textinput">Marca</label>  
-                      <div class="col-md-9">
-                        <input id="textinput" name="textinput" type="text" placeholder="Nombre de la Marca" class="form-control input-md">
-                      </div>
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="label_editar_marca">Editar Marca</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="textinput">Nombre marca</label> 
+                    <div class="col-md-9">
+                      <input id="textinput" name="textinput" type="text" placeholder="Nombre de la Marca" class="form-control input-md">
                     </div>
-                    <div class="form-group">
-                      <label class="col-md-3 control-label" for="textinput">Imagen</label>  
-                      <div class="col-md-9">
-                        <div class="alert alert-warning alert-dismissable">
-                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                          Las imágenes deben ser formato .jpg con un tamaño de 200x300px.
-                        </div>
-                        <img src="img/la-celia.jpg" class="img-responsive">
-                        <input id="filebutton" name="filebutton" class="input-file" type="file">
-                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Imagen</label>  
+                    <div class="col-md-9">
+                    <img src="img/la-celia.jpg" class="img-responsive img-thumbnail">
                     </div>
-
-                    
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success">Guardar cambios</button>
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="filebutton">Nueva Imagen</label>  
+                    <div class="col-md-9">
+                    <input id="filebutton" name="filebutton" class="input-file" type="file">
+                    <br>
+                    <small>Las imágenes deben ser formato .jpg con un tamaño de 200x300px.</small>
+                    </div>
                   </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success">Guardar cambios</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
                 </fieldset>
-              </form>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
 
+              </form>
+            </div>
+          </div>
+        </div><!-- /.modal -->
         <!-- Modal Sugerencias -->
-        <div class="modal fade" id="sugerencias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="sugerencias" tabindex="-1" role="dialog" aria-labelledby="label_comentarios" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <form class="form-horizontal">
-                <fieldset>
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Envienos sus comentarios sobre su experiencia en el sitio</h4>
+              <fieldset>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="label_comentarios">Envienos sus comentarios sobre su experiencia en el sitio</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="textinput">Comentarios</label>  
+                  <div class="col-md-9">
+                  <textarea class="form-control" id="textarea" name="textarea"></textarea>
                   </div>
-                  <div class="modal-body">
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                      <label class="col-md-3 control-label" for="textinput">Comentarios</label>  
-                      <div class="col-md-9">
-                        <textarea class="form-control" id="textarea" name="textarea"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="radios">¿Cómo califica su experiencia en el sitio?</label>
+                    <div class="col-md-9">
+                      <div class="radio">
+                        <label for="radios-0">
+                          <input type="radio" name="radios" id="radios-0" value="5" checked="checked">
+                          Excelente
+                        </label>
                       </div>
-                    </div>
-
-                    <!-- Multiple Radios -->
-                    <div class="form-group">
-                      <label class="col-md-3 control-label" for="radios">¿Cómo califica su experiencia en el sitio?</label>
-                      <div class="col-md-9">
-                        <div class="radio">
-                          <label for="radios-0">
-                            <input type="radio" name="radios" id="radios-0" value="5" checked="checked">
-                            Excelente
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label for="radios-1">
-                            <input type="radio" name="radios" id="radios-1" value="4">
-                            Muy Buena
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label for="radios-2">
-                            <input type="radio" name="radios" id="radios-2" value="3">
+                      <div class="radio">
+                        <label for="radios-1">
+                          <input type="radio" name="radios" id="radios-1" value="4">
+                          Muy Buena
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="radios-2">
+                          <input type="radio" name="radios" id="radios-2" value="3">
                             Buena
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label for="radios-3">
-                            <input type="radio" name="radios" id="radios-3" value="2">
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="radios-3">
+                          <input type="radio" name="radios" id="radios-3" value="2">
                             Mala
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label for="radios-4">
-                            <input type="radio" name="radios" id="radios-4" value="1">
-                            Pésima
-                          </label>
-                        </div>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="radios-4">
+                          <input type="radio" name="radios" id="radios-4" value="1">
+                              Pésima
+                        </label>
                       </div>
                     </div>
-                    
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success">Enviar sugerencias</button>
-                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success">Enviar sugerencias</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
                 </fieldset>
               </form>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
+            </div>
+          </div>
         </div><!-- /.modal -->
-
-        <!-- Modal Nueva Carpeta -->
-        <div class="modal fade" id="nueva-carpeta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!-- Modal agregar categoría -->
+        <div id="modal_agregar_categoria" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="label_agregar_categoria" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Nueva Carpeta</h4>
+                <h4 id="label_agregar_categoria" class="modal-title">Agregar categoría</h4>
               </div>
+              <form action="">
+                <div class="modal-body">
+                  <div class="form-group">
+                    <input class="form-control input-md nuevo" type="text" placeholder="Escriba aquí el nombre de la nueva categoría">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success" data-dismiss="modal">Agregar categoría</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                  <div class="clearboth"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div><!-- /.modal -->
+        <!-- Modal Agregar Recurso -->
+        <div class="modal fade" id="modal_agregar_recurso" tabindex="-1" role="dialog" aria-labelledby="label_agregar_recurso" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 id="label_agregar_recurso" class="modal-title">Agregar Recurso</h4>
+              </div>
+              <form class="form-horizontal">
+              <fieldset>
               <div class="modal-body">
-                ...
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="nombre_marca">Nombre recurso</label> 
+                  <div class="col-md-9">
+                    <input name="nombre_marca" type="text" placeholder="Nombre del recurso" class="form-control input-md">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="descripcion_marca">Descripción</label> 
+                  <div class="col-md-9">
+                    <textarea name="descripcion_marca"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="filebutton">Seleccionar archivo</label>  
+                  <div class="col-md-9">
+                  <input class="input-file filebutton" name="filebutton" type="file">
+                  </div>
+                </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-success">Crear nueva carpeta</button>
+                <button type="button" class="btn btn-success">Guardar cambios</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
               </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
+              </fieldset>
+              </form>
+            </div>
+          </div>
+        </div><!-- /.modal -->
+          <!-- Modal Eliminar Recurso -->
+          <div class="modal fade" id="modal_eliminar_recurso" tabindex="-1" role="dialog" aria-labelledby="label_eliminar_recurso" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="label_eliminar_recurso">Eliminar Recurso</h4>
+                </div>
+                <div class="modal-body">
+                  <p>¿Esta seguro que desea borrar este recurso?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger">Eliminar</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.modal -->
+        <!-- Modal Editar Recurso -->
+        <div class="modal fade" id="modal_editar_recurso" tabindex="-1" role="dialog" aria-labelledby="label_editar_recurso" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form class="form-horizontal">
+              <fieldset>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="label_editar_recurso">Editar Recurso</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="nombre_marca">Nombre recurso</label> 
+                  <div class="col-md-9">
+                    <input name="nombre_marca" type="text" placeholder="Nombre del recurso" class="form-control input-md">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="descripcion_marca">Descripción</label> 
+                  <div class="col-md-9">
+                    <textarea name="descripcion_marca"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Archivo actual</label>  
+                  <div class="col-md-9">
+                    <span>nombreArchivo.extension</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="filebutton">Seleccionar archivo</label>  
+                  <div class="col-md-9">
+                  <input class="input-file filebutton" name="filebutton" type="file">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success">Guardar cambios</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              </div>
+              </fieldset>
+              </form>
+            </div>
+          </div>
         </div><!-- /.modal -->
 
         <div class="row">
@@ -223,50 +393,21 @@
         </div><!-- /.row -->
 
         <div class="row">
-
-          <!-- Modal Eliminar Recurso -->
-          <div class="modal fade" id="eliminar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="myModalLabel">Eliminar Recurso</h4>
-                </div>
-                <div class="modal-body">
-                  <p>¿Esta seguro que desea borrar este recurso?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
-          <!-- Modal Editar Recurso -->
-          <div class="modal fade" id="editar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="myModalLabel">Editar Recurso</h4>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn btn-success">Guardar cambios</button>
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
-
           <!-- Listado de recursos -->
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">            
             <div class="thumbnail">
-              <div class="pull-right action-buttons">
+              <!--div class="pull-right action-buttons">
                 <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
                 <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
+              </div-->
+
+              <div class="pull-right dropdown opciones">
+                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_editar_recurso">Editar</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_recurso">Eliminar</a></li>
+                </ul>
               </div>
               <div class="caption">
                 <div class="description">
@@ -282,9 +423,18 @@
           </div>
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
             <div class="thumbnail">
-              <div class="pull-right action-buttons">
+              <!--div class="pull-right action-buttons">
                 <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
                 <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
+              </div-->
+
+              <div class="pull-right dropdown opciones">
+                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_editar_recurso">Editar</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_recurso">Eliminar</a></li>
+                </ul>
               </div>
               <div class="caption">
                 <div class="description">
@@ -299,9 +449,18 @@
           </div>
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
             <div class="thumbnail">
-              <div class="pull-right action-buttons">
+              <!--div class="pull-right action-buttons">
                 <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
                 <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
+              </div-->
+
+              <div class="pull-right dropdown opciones">
+                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="#"  data-toggle="modal" data-target="#modal_editar_recurso">Editar</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_recurso">Eliminar</a></li>
+                </ul>
               </div>
               <div class="caption">
                 <div class="description">
@@ -315,32 +474,15 @@
             </div>
           </div>
           <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
-            <a href="" data-toggle="modal" data-target="#agregar-recurso">
+            <!--a class="agregar" href="" data-toggle="modal" data-target="#agregar-recurso" data-toggle="tooltip" title="Agregar nuevo recurso"-->
+            <a class="agregar" href="" data-toggle="modal" data-target="#modal_agregar_recurso">
               <div class="hero-widget well well-sm">
                 <div class="icon">
                  <i class="fa fa-plus-circle"></i>
+					<span>Agregar nuevo recurso</span>
                </div>
              </div>
            </a>
-
-           <!-- Modal -->
-           <div class="modal fade" id="agregar-recurso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="myModalLabel">Agregar recurso</h4>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-success">Agregar recurso</button>
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
         </div>
       </div><!-- /.row -->
 
