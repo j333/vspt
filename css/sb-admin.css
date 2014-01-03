@@ -27,7 +27,14 @@ strong.msj_inicio{
   border-bottom:#DF3F4D solid thin;
   display:block;
 }
-
+strong.error{
+  font-weight:300;
+  font-size:36px;
+  padding-bottom:20px;
+  margin-bottom:20px;
+  border-bottom:#DF3F4D solid thin;
+  display:block;
+}
 .well{
   margin: 0;
   padding: 0;
