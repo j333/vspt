@@ -180,6 +180,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color:#999;
   text-decoration:none;
 }
+.btn.pull-right{
+  margin:0 3px;
+}
 .agregar span{
   position:absolute;
   bottom:-30px;
@@ -189,7 +192,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   text-align:center;
   font-size:14px;
 }
-.modal input[type="text"]{
+.navbar-nav > li > .dropdown-menu{
+  padding:5px 8px;
+}
+.modal input,
+.modal select{
   background:#fff;
 }
 .modal textarea{
@@ -223,7 +230,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .divider{
   margin:0;
 }
-
+.usuarios th i{
+  cursor:pointer;
+}
+.usuarios a{
+  display:inline-block;
+  width:40%;
+  text-align:center;
+}
 /* Edit Below to Customize Widths > 768px */
 @media (min-width:768px) {
 

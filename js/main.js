@@ -4,3 +4,5 @@ jQuery(function($) {
 		$('.description').responsiveEqualHeightGrid();
 		$('.recursos').responsiveEqualHeightGrid();
 });
+
+$('.aclaracion').tooltip({'placement':'bottom'});
