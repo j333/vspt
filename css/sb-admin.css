@@ -35,6 +35,10 @@ strong.error{
   border-bottom:#DF3F4D solid thin;
   display:block;
 }
+strong.palabras_busqueda{
+  font-size:22px;
+  margin-left:10px;
+}
 .well{
   margin: 0;
   padding: 0;
