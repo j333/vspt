@@ -206,6 +206,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .navbar-nav > li > .dropdown-menu{
   padding:5px 8px;
 }
+.dropdown .fa-sort-asc{
+  margin-left:3px;
+}
 .modal input,
 .modal select{
   background:#fff;
