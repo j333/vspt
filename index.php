@@ -1,95 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>VSPT Downloads</title>
-
-	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-
-	<!-- Add custom CSS here -->
-	<link href="css/sb-admin.css" rel="stylesheet">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
-	<style type="text/css">
-		#wrapper {
-			padding-left: 0px;
-		}
-		.brands {
-			margin: auto;
-			margin-bottom:1em;
-		}
-		@media (min-width:768px) {
-			.brands a img {
-				-webkit-filter: grayscale(100%);
-				-moz-filter: grayscale(100%);
-				filter: grayscale(100%);
-				-webkit-transition: .5s;
-				transition: .5s;
-			}
-			.brands a img:hover {
-				-webkit-filter: grayscale(0%);
-				-moz-filter: grayscale(0%);
-				filter: grayscale(0%);
-			}			
-		}
-	</style>
-</head>
-
-<body>
-
-	<div id="wrapper">
-
-		<!-- Sidebar -->
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html">VSPT Downloads</a>
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<div class="col-sm-5 col-md-4 pull-left search">
-					<form class="navbar-form" role="search">
-						<div class="input-group input-group-sm">
-							<input type="text" class="form-control" placeholder="Buscar recursos" name="srch-term" id="srch-term">
-							<div class="input-group-btn">
-								<button class="btn btn-danger" type="submit"><i class="fa fa-search"></i></button>
-							</div>
-						</div>
-					</form>
-				</div>
-	          <ul class="nav navbar-nav navbar-right navbar-user">
-	            <li>
-	              <a href="#" data-toggle="modal" data-target="#modal_sugerencias"><i class="fa fa-lightbulb-o"></i> Sugerencias</a>
-	            </li>
-	            <li class="dropdown">
-	              <a href="#"  data-toggle="dropdown"><i class="fa fa-users"></i> Usuarios <i class="fa fa-sort-asc"></i></a>
-	              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	                <li><a href="#"><i class="fa fa-cog"></i> Administrar usuarios</a></li>
-	                <li class="divider"></li>
-	                <li><a href="#"><i class="fa fa-plus"></i> Crear usuario</a></li>
-	              </ul>
-	            </li>
-	            <li class="dropdown">
-	              <a href="#"  data-toggle="dropdown"><i class="fa fa-user"></i> Nombre Usuario <i class="fa fa-sort-asc"></i></a>
-	              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	                <a href="#"> <i class="fa fa-power-off"></i> Salir</a>
-	              </ul>
-	            </li>
-	          </ul>
-			</div><!-- /.navbar-collapse -->
-		</nav>
-
-		<div id="page-wrapper">
+<?php include 'header.php'; ?>
+		<div id="page-wrapper-noaside">
 
         <!-- Modal Sugerencias -->
         <div class="modal fade" id="modal_sugerencias" tabindex="-1" role="dialog" aria-labelledby="label_sugerencias" aria-hidden="true">
@@ -154,7 +64,7 @@
           </div>
         </div><!-- /.modal -->
 
-        <div class="row">
+        <div id="inicio_marcas" class="row">
 	        <div class="col-lg-12">
             <h1>VSPT <small>Downloads</small></h1>
             <ol class="breadcrumb">
@@ -167,7 +77,7 @@
             <strong class="msj_inicio">Bienvenido a <em>VSPT Downloads</em>, aquí encontrará todo el material de nuestras marcas. Haga click en la marca de cual necesita recursos.</strong>
           </div>
 	        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 brands">
-	        	<a href="brand.html">
+	        	<a href="brand.php">
 	        		<img class="img-responsive" src="img/la-celia.jpg" alt="Responsive image">
 	        	</a>
 	        </div>
@@ -270,11 +180,4 @@
 
 	</div><!-- /#wrapper -->
 
-	<!-- JavaScript -->
-	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/grids.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-
-</body>
-</html>
+	<?php include 'footer.php'; ?>

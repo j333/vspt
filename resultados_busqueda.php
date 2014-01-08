@@ -1,127 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>VSPT Downloads / La Celia</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-
-  <!-- Add custom CSS here -->
-  <link href="css/sb-admin.css" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <!-- Page Specific CSS -->
-  <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-
-  <div id="wrapper">
-    <!-- Sidebar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">VSPT Downloads</a>
-      </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav side-nav">
-            <li class="brand">
-
-              <div class="pull-right dropdown opciones">
-                <!--a href="" data-toggle="modal" data-target="#modal_editar_marca"><i class="fa fa-pencil fa-fw"></i></a-->
-                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a href="#" data-toggle="modal" data-target="#modal_editar_marca">Editar La Celia</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_marca">Eliminar marca</a></li>
-                </ul>
-              </div>
-
-              <a href=""><img src="img/la-celia.jpg"></a>
-			</li>
-            <li>
-              <a href="index.html">
-                <i class="fa fa-folder fa-fw"></i> Fichas técnicas
-              </a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder fa-fw"></i> Fotos <i class="fa fa-sort-asc pull-right"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"><i class="fa fa-folder fa-fw"></i> Bodega</a></li>
-                <li><a href="#"><i class="fa fa-folder fa-fw"></i> Viñedo</a></li>
-                <li><a href="#"><i class="fa fa-folder fa-fw"></i> Bottleshots</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal_agregar_categoria"><i class="fa fa-plus fa-fw"></i> Agregar categroría</a></li>
-              </ul>
-            </li>
-            <li class="active"><a><i class="fa fa-folder-open fa-fw"></i> Logos</a></li>
-            <li><a href=""><i class="fa fa-folder fa-fw"></i> Videos</a></li>
-            <li><a href="" data-toggle="modal" data-target="#modal_agregar_categoria"><i class="fa fa-plus fa-fw"></i> Agregar categroría</a></li>
-
-          </ul>
-          <div class="col-sm-5 col-md-4 pull-left search">
-            <form class="navbar-form" role="search">
-              <div class="input-group input-group-sm">
-                <input type="text" class="form-control" placeholder="Buscar recursos de La Celia" name="srch-term" id="srch-term">
-                <div class="input-group-btn">
-                  <button class="btn btn-danger" type="submit"><i class="fa fa-search"></i></button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <ul class="nav navbar-nav navbar-right navbar-user">
-            <li>
-              <a href="#" data-toggle="modal" data-target="#modal_sugerencias"><i class="fa fa-lightbulb-o"></i> Sugerencias</a>
-            </li>
-            <li class="dropdown">
-              <a href="#"  data-toggle="dropdown"><i class="fa fa-users"></i> Usuarios <i class="fa fa-sort-asc"></i></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a href="#"><i class="fa fa-cog"></i> Administrar usuarios</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-plus"></i> Crear usuario</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#"  data-toggle="dropdown"><i class="fa fa-user"></i> Nombre Usuario <i class="fa fa-sort-asc"></i></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <a href="#"> <i class="fa fa-power-off"></i> Salir</a>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </nav>
-
+<?php include 'header.php'; ?>
+<?php include 'menu_lateral_empresa.php'; ?>
+<?php include 'modals_marca.php'; ?>
       <div id="page-wrapper">
-
-          <!-- Modal Genérico
-          <div class="modal fade" id="modal_nombre_id" tabindex="-1" role="dialog" aria-labelledby="label_nombre_id" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="label_nombre_id">Título modal</h4>
-                </div>
-                <div class="modal-body">
-                  <p>Acción del modal</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          /.modal -->
 
           <!-- Modal Eliminar Marca -->
           <div class="modal fade" id="modal_eliminar_marca" tabindex="-1" role="dialog" aria-labelledby="label_eliminar_marca" aria-hidden="true">
@@ -141,7 +21,6 @@
               </div>
             </div>
           </div><!-- /.modal -->
-
           <!-- Modal Confirmar Eliminar Marca -->
           <div class="modal fade" id="modal_confirmar_eliminar_marca" tabindex="-1" role="dialog" aria-labelledby="label_confirmar_eliminar_marca" aria-hidden="true">
             <div class="modal-dialog">
@@ -194,69 +73,6 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-success">Guardar cambios</button>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                </div>
-                </fieldset>
-
-              </form>
-            </div>
-          </div>
-        </div><!-- /.modal -->
-        <!-- Modal Sugerencias -->
-        <div class="modal fade" id="modal_sugerencias" tabindex="-1" role="dialog" aria-labelledby="label_comentarios" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <form class="form-horizontal">
-              <fieldset>
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="label_sugerencias">Envienos sus comentarios sobre su experiencia en el sitio</h4>
-              </div>
-              <div class="modal-body">
-                <div class="form-group">
-                  <label class="col-md-3 control-label" for="textinput">Comentarios</label>  
-                  <div class="col-md-9">
-                  <textarea class="form-control" id="textarea" name="textarea"></textarea>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-md-3 control-label" for="radios">¿Cómo califica su experiencia en el sitio?</label>
-                    <div class="col-md-9">
-                      <div class="radio">
-                        <label for="radios-0">
-                          <input type="radio" name="radios" id="radios-0" value="5" checked="checked">
-                          Excelente
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label for="radios-1">
-                          <input type="radio" name="radios" id="radios-1" value="4">
-                          Muy Buena
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label for="radios-2">
-                          <input type="radio" name="radios" id="radios-2" value="3">
-                            Buena
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label for="radios-3">
-                          <input type="radio" name="radios" id="radios-3" value="2">
-                            Mala
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label for="radios-4">
-                          <input type="radio" name="radios" id="radios-4" value="1">
-                              Pésima
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-success">Enviar sugerencias</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                 </div>
                 </fieldset>
@@ -392,10 +208,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>La Celia <small>Downloads</small></h1>
-            <ol class="breadcrumb">
-              <li class="active"><a href="index.html"><i class="fa fa-home"></i> Inicio</a> / La Celia</li>
-            </ol>
+            <h1>La Celia <small>Resultados de la busqueda para: </small> <strong class="palabras_busqueda">Palabras búsqueda</strong></h1>
           </div>
         </div><!-- /.row -->
 
@@ -480,28 +293,10 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
-            <!--a class="agregar" href="" data-toggle="modal" data-target="#agregar-recurso" data-toggle="tooltip" title="Agregar nuevo recurso"-->
-            <a class="agregar" href="" data-toggle="modal" data-target="#modal_agregar_recurso">
-              <div class="hero-widget well well-sm">
-                <div class="icon">
-                 <i class="fa fa-plus-circle"></i>
-					<span>Agregar nuevo recurso</span>
-               </div>
-             </div>
-           </a>
-        </div>
       </div><!-- /.row -->
 
     </div><!-- /#page-wrapper -->
 
   </div><!-- /#wrapper -->
 
-  <!-- JavaScript -->
-  <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/grids.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-
-</body>
-</html>
+  <?php include 'footer.php'; ?>

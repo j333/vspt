@@ -12,7 +12,6 @@
   <!-- Add custom CSS here -->
   <link href="css/sb-admin.css" rel="stylesheet">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <!-- Page Specific CSS -->
   <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
 </head>
@@ -20,9 +19,10 @@
 <body>
 
   <div>
-    <!-- Sidebar -->
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
+
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -30,12 +30,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">VSPT Downloads</a>
+        <a class="navbar-brand" href="index.php">VSPT Downloads</a>
       </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <div class="hidden-sm col-md-4 pull-left search">
+
+          <div class="pull-left search">
             <form class="navbar-form" role="search">
               <div class="input-group input-group-sm">
                 <input type="text" class="form-control" placeholder="Buscar recursos" name="srch-term" id="srch-term">
@@ -45,6 +45,7 @@
               </div>
             </form>
           </div>
+
           <ul class="nav navbar-nav navbar-right navbar-user">
             <li>
               <a href="#" data-toggle="modal" data-target="#modal_sugerencias"><i class="fa fa-lightbulb-o"></i> Sugerencias</a>
@@ -52,22 +53,22 @@
             <li class="dropdown">
               <a href="#"  data-toggle="dropdown"><i class="fa fa-users"></i> Usuarios <i class="fa fa-sort-asc"></i></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a href="#"><i class="fa fa-cog"></i> Administrar usuarios</a></li>
+                <li><a href="usuarios.php"><i class="fa fa-cog"></i> Administrar usuarios</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-plus"></i> Crear usuario</a></li>
+                <li><a href="crear_usuario.php"><i class="fa fa-plus"></i> Crear usuario</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#"  data-toggle="dropdown"><i class="fa fa-user"></i> Nombre Usuario <i class="fa fa-sort-asc"></i></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <a href="#"> <i class="fa fa-power-off"></i> Salir</a>
+                <a href="login.php" class="salir"> <i class="fa fa-power-off"></i> Salir</a>
               </ul>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </nav>
 
-      <div id="page-wrapper">
+      <!-- Mensajes en Modal -->
 
           <!-- Modal Genérico
           <div class="modal fade" id="modal_nombre_id" tabindex="-1" role="dialog" aria-labelledby="label_nombre_id" aria-hidden="true">
@@ -150,106 +151,3 @@
             </div>
           </div>
         </div><!-- /.modal -->
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>VSPT <small>Resultados de la busqueda para: </small> <strong class="palabras_busqueda">Palabras búsqueda</strong></h1>
-              <hr>
-          </div>
-        </div><!-- /.row -->
-
-        <div class="row">
-          <!-- Listado de recursos -->
-          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">            
-            <div class="thumbnail">
-              <!--div class="pull-right action-buttons">
-                <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
-                <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
-              </div-->
-
-              <div class="pull-right dropdown opciones">
-                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a href="#" data-toggle="modal" data-target="#modal_editar_recurso">Editar</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_recurso">Eliminar</a></li>
-                </ul>
-              </div>
-              <div class="caption">
-                <div class="description">
-                  <h4>Logotipo</h4>
-                  <p><small>Imagen png. Imagen con fondo transparente.</small></p>
-                </div>
-                <div class="picture" style="background-image: url(img/la-celia.jpg);">
-                </div>
-                <small>Type: png | Size: 30kb</small>
-                <a href="#" class="btn btn-primary btn-success"><i class="fa fa-cloud-download"></i> Download</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
-            <div class="thumbnail">
-              <!--div class="pull-right action-buttons">
-                <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
-                <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
-              </div-->
-
-              <div class="pull-right dropdown opciones">
-                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a href="#" data-toggle="modal" data-target="#modal_editar_recurso">Editar</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_recurso">Eliminar</a></li>
-                </ul>
-              </div>
-              <div class="caption">
-                <div class="description">
-                  <h4>Logotipo La Celia</h4>
-                  <p><small>Imagen png</small></p>
-                </div>
-                <div class="picture"></div>
-                <small>Type: png | Size: 30kb</small>
-                <a href="#" class="btn btn-primary btn-success"><i class="fa fa-cloud-download"></i> Download</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 recursos">
-            <div class="thumbnail">
-              <!--div class="pull-right action-buttons">
-                <a href="" data-toggle="modal" data-target="#editar-recurso"><i class="fa fa-pencil fa-fw"></i></a>
-                <a href="" data-toggle="modal" data-target="#eliminar-recurso"><i class="fa fa-trash-o fa-fw"></i></a>
-              </div-->
-
-              <div class="pull-right dropdown opciones">
-                <a data-toggle="dropdown" href="#"><i class="fa fa-pencil fa-fw"></i></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a href="#"  data-toggle="modal" data-target="#modal_editar_recurso">Editar</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#" data-toggle="modal" data-target="#modal_eliminar_recurso">Eliminar</a></li>
-                </ul>
-              </div>
-              <div class="caption">
-                <div class="description">
-                  <h4>Logotipo La Celia</h4>
-                  <p><small>Imagen png</small></p>
-                </div>
-                <div class="picture"></div>
-                <small>Type: png | Size: 30kb</small>
-                <a href="#" class="btn btn-primary btn-success"><i class="fa fa-cloud-download"></i> Download</a>
-              </div>
-            </div>
-          </div>
-      </div><!-- /.row -->
-
-    </div><!-- /#page-wrapper -->
-
-  </div><!-- /#wrapper -->
-
-  <!-- JavaScript -->
-  <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/grids.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-
-</body>
-</html>
