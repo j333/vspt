@@ -325,6 +325,17 @@ a:hover .fa-pencil{
   width:40%;
   text-align:center;
 }
+.table-responsive input[type="search"]{
+  border:#dedede solid thin;
+  padding:8px 12px;
+  border-radius:3px;
+  margin-right:5px;
+  width:100%;
+  max-width:350px;
+}
+.table-responsive input[type="search"]:focus{
+  border-color:#999;
+}
 /* Edit Below to Customize Widths > 768px */
 @media (min-width:768px) {
   .nav > li{

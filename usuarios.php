@@ -96,16 +96,6 @@
         <div class="row">
           <!-- Listado de usuarios -->
           <div class="col-lg-10">
-
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group input-group">
-                  <span class="input-group-addon">Filtrar</span>
-                  <input type="text" class="form-control" placeholder="Escriba aquí el nombre del usuario">
-                </div>
-              </div>
-              <div class="col-sm-6"></div>
-            </div>
             <div class="table-responsive">
               <table class="table table-hover table-striped tablesorter usuarios">
                 <thead>
@@ -196,6 +186,28 @@
                       <a href="" data-toggle="modal" data-target="#modal_eliminar_usuario"><i class="fa fa-trash-o aclaracion" data-toggle="tooltip" title="eliminar usuario"></i></a>
                     </td>
                   </tr>
+                  <tr>
+                    <td>Juan Carlos</td>
+                    <td>VSPT</td>
+                    <td>Admin Primario</td>
+                    <td>9-10-12</td>
+                    <td>24-12-12</td>
+                    <td>
+                      <a href="" data-toggle="modal" data-target="#modal_editar_usuario"><i class="fa fa-pencil aclaracion" data-toggle="tooltip" title="editar usuario"></i></a>
+                      <a href="" data-toggle="modal" data-target="#modal_eliminar_usuario"><i class="fa fa-trash-o aclaracion" data-toggle="tooltip" title="eliminar usuario"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ana Laura</td>
+                    <td>La Celia</td>
+                    <td>Admin Secundario</td>
+                    <td>9-10-12</td>
+                    <td>24-12-12</td>
+                    <td>
+                      <a href="" data-toggle="modal" data-target="#modal_editar_usuario"><i class="fa fa-pencil aclaracion" data-toggle="tooltip" title="editar usuario"></i></a>
+                      <a href="" data-toggle="modal" data-target="#modal_eliminar_usuario"><i class="fa fa-trash-o aclaracion" data-toggle="tooltip" title="eliminar usuario"></i></a>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -207,5 +219,4 @@
   </div><!-- /#wrapper -->
 
   <!-- JavaScript -->
-  <script src="js/tablesorter/tables.js"></script>
 <?php include 'footer.php'; ?>

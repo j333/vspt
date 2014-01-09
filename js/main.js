@@ -6,3 +6,7 @@ jQuery(function($) {
 });
 
 $('.aclaracion').tooltip({'placement':'bottom'});
+
+$(document).ready(function() {
+  $('table.usuarios').filterTable();
+});
