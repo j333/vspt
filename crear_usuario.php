@@ -34,18 +34,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-md-3 control-label">Empresa</label>
-                  <div class="col-md-9">
-                    <select class="form-control">
-                      <option>Nombre Empresa</option>
-                      <option>Todas</option>
-                      <option>VSPT</option>
-                      <option>La Celia</option>
-                      <option>Gato Negro</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
                   <label class="col-md-3 control-label">Privilegios</label>
                   <div class="col-md-9">
                     <select class="form-control">
@@ -55,6 +43,41 @@
                       <option>Cliente</option>
                     </select>
                   </div>
+                </div>
+                <div class="form-group">
+                	<label class="col-md-3 control-label">Marcas a ver/editar</label>
+                	<div class="col-md-9">
+                		<div class="checkbox col-xs-6 col-md-3">
+                			<label for="checkboxes-0">
+                				<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                				Tamarí
+                			</label>
+                		</div>
+                		<div class="checkbox col-xs-6 col-md-3">
+                			<label for="checkboxes-1">
+                				<input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                				La Celia
+                			</label>
+                		</div>
+                		<div class="checkbox col-xs-6 col-md-3">
+                			<label for="checkboxes-1">
+                				<input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                				La Celia
+                			</label>
+                		</div>
+                		<div class="checkbox col-xs-6 col-md-3">
+                			<label for="checkboxes-1">
+                				<input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                				La Celia
+                			</label>
+                		</div>
+                		<div class="checkbox col-xs-6 col-md-3">
+                			<label for="checkboxes-1">
+                				<input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                				La Celia
+                			</label>
+                		</div>
+                	</div>
                 </div>
               <div class="form-group">
                 <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Cancelar</button>

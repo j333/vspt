@@ -50,12 +50,12 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-md-3 control-label">Empresa</label>
+                  <label class="col-md-3 control-label">Marcas</label>
                   <div class="col-md-9">
                     <select class="form-control">
-                      <option>Nombre Empresa</option>
+                      <option>Nombre Marcas</option>
                       <option>Todas</option>
-                      <option>VSPT</option>
+                      <option>Tamarí</option>
                       <option>La Celia</option>
                       <option>Gato Negro</option>
                     </select>
@@ -85,7 +85,7 @@
 
         <div class="row">
           <div class="col-lg-10 col-md-offset-1">
-            <h1>VSPT <small>Aministración de usuarios</small></h1>
+            <h1>Tamarí <small>Aministración de usuarios</small></h1>
             <ol class="breadcrumb">
               <li class="active"><a href="index.html"><i class="fa fa-home"></i> Inicio</a> / Administrar usuarios</li>
             </ol>
@@ -100,7 +100,7 @@
                 <thead>
                   <tr>
                     <th>Nombre usuario <i class="fa fa-sort"></i></th>
-                    <th>Empresa <i class="fa fa-sort"></i></th>
+                    <th>Marcas <i class="fa fa-sort"></i></th>
                     <th>Privilegios <i class="fa fa-sort"></i></th>
                     <th>Fecha de creación <i class="fa fa-sort"></i></th>
                     <th>Última visita <i class="fa fa-sort"></i></th>
@@ -110,7 +110,7 @@
                 <tbody>
                   <tr>
                     <td>Juan Carlos</td>
-                    <td>VSPT</td>
+                    <td>Tamarí</td>
                     <td>Admin Primario</td>
                     <td>9-10-12</td>
                     <td>24-12-12</td>
@@ -187,7 +187,7 @@
                   </tr>
                   <tr>
                     <td>Juan Carlos</td>
-                    <td>VSPT</td>
+                    <td>Tamarí</td>
                     <td>Admin Primario</td>
                     <td>9-10-12</td>
                     <td>24-12-12</td>
