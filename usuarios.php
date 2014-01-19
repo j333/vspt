@@ -110,7 +110,7 @@
                 <tbody>
                   <tr>
                     <td>Juan Carlos</td>
-                    <td>Tamarí</td>
+                    <td>Todas</td>
                     <td>Admin Primario</td>
                     <td>9-10-12</td>
                     <td>24-12-12</td>
@@ -154,7 +154,7 @@
                   </tr>
                   <tr>
                     <td>Enzo</td>
-                    <td>La Celia</td>
+                    <td>La Celia, Tamarí, La Consulta</td>
                     <td>Cliente</td>
                     <td>9-10-12</td>
                     <td>24-12-12</td>
@@ -187,7 +187,7 @@
                   </tr>
                   <tr>
                     <td>Juan Carlos</td>
-                    <td>Tamarí</td>
+                    <td>Todas</td>
                     <td>Admin Primario</td>
                     <td>9-10-12</td>
                     <td>24-12-12</td>

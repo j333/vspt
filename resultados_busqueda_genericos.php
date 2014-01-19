@@ -4,8 +4,9 @@
       <div id="page-wrapper-noaside">
         <div class="row">
           <div class="col-lg-12">
-            <h1>VSPT <small>Resultados de la busqueda para: </small> <strong class="palabras_busqueda">Palabras búsqueda</strong></h1>
-              <hr>
+            <h1>VSPT</br>
+            <small>Resultados de la busqueda para: </small> <strong class="palabras_busqueda">Palabras búsqueda</strong></h1>
+            <hr>
           </div>
         </div><!-- /.row -->
 

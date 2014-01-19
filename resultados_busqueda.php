@@ -208,7 +208,8 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>La Celia <small>Resultados de la busqueda para: </small> <strong class="palabras_busqueda">Palabras búsqueda</strong></h1>
+            <h1>La Celia </br>
+            <small>Resultados de la busqueda para: </small> <strong class="palabras_busqueda">Palabras búsqueda</strong></h1>
           </div>
         </div><!-- /.row -->
 
