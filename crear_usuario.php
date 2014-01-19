@@ -1,9 +1,8 @@
 <?php include 'header.php'; ?>
   
-      <ul class="nav navbar-nav side-nav"></ul>
-      <div id="page-wrapper">
+      <div id="page-wrapper-noaside">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-10 col-md-offset-1">
             <h1>VSPT <small>Creación de usuario</small></h1>
             <ol class="breadcrumb">
               <li class="active"><a href="index.html"><i class="fa fa-home"></i> Inicio</a> / Crear Usuario</li>
@@ -13,7 +12,7 @@
         <div class="row">
           <!-- Listado de usuarios -->
 
-          <div class="col-lg-10">
+          <div class="col-lg-10  col-md-offset-1">
               <form class="form-horizontal" role="form">
               <fieldset>
                 <div class="form-group">

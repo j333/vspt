@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 
-      <ul class="nav navbar-nav side-nav"></ul>
-      <div id="page-wrapper">
+      <div id="page-wrapper-noaside">
 
           <!-- Modal Eliminar Usuario -->
           <div class="modal fade" id="modal_eliminar_usuario" tabindex="-1" role="dialog" aria-labelledby="label_eliminar_usuario" aria-hidden="true">
@@ -85,7 +84,7 @@
         </div><!-- /.modal -->
 
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-10 col-md-offset-1">
             <h1>VSPT <small>Aministración de usuarios</small></h1>
             <ol class="breadcrumb">
               <li class="active"><a href="index.html"><i class="fa fa-home"></i> Inicio</a> / Administrar usuarios</li>
@@ -95,7 +94,7 @@
 
         <div class="row">
           <!-- Listado de usuarios -->
-          <div class="col-lg-10">
+          <div class="col-lg-10 col-md-offset-1">
             <div class="table-responsive">
               <table class="table table-hover table-striped tablesorter usuarios">
                 <thead>
