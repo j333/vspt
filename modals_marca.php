@@ -98,6 +98,48 @@
             </div>
           </div>
         </div><!-- /.modal -->
+        <!-- Modal editar categoría -->
+        <div id="modal_editar_categoria" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="label_editar_categoria" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 id="label_editar_categoria" class="modal-title">Editar categoría</h4>
+              </div>
+              <form action="">
+                <div class="modal-body">
+                  <div class="form-group">
+                    <input class="form-control input-md nuevo" type="text" placeholder="Escriba aquí el nuevo nombre de la categoría">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                  <div class="clearboth"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div><!-- /.modal -->
+          <!-- Modal Eliminar categoría -->
+          <div class="modal fade" id="modal_eliminar_categoria" tabindex="-1" role="dialog" aria-labelledby="label_eliminar_categoria" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="label_eliminar_categoria">Eliminar categoría</h4>
+                </div>
+                <div class="modal-body">
+                  <p>¿Esta seguro que desea esta categoría y todo su contenido?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal_confirmar_eliminar_marca" data-dismiss="modal">Eliminar</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.modal -->
+
         <!-- Modal Agregar Recurso -->
         <div class="modal fade" id="modal_agregar_recurso" tabindex="-1" role="dialog" aria-labelledby="label_agregar_recurso" aria-hidden="true">
           <div class="modal-dialog">

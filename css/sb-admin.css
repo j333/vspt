@@ -281,13 +281,29 @@ a:hover .fa-pencil{
 .dropdown .fa-sort-asc{
   margin-left:3px;
 }
-.dropdown-toggle.fotos i+i{
-  float:right;
-  margin-right:10px;
-}
 .modal input,
 .modal select{
   background:#fff;
+}
+.folder_menu{
+  position:absolute;
+  top:15px;
+  right:25px;
+}
+.folder_menu i{
+  margin-left:10px;
+  color:#989894;
+}
+.folder_menu i:hover,
+.folder_menu i:active{
+  color:#fff;
+}
+.folder_menu .opciones .dropdown-menu{
+  border:#fff solid thin;
+  margin-right:30px;
+}
+.dropdown-menu li{
+  position:relative;
 }
 .modal textarea{
   width:100%;
@@ -338,6 +354,9 @@ a:hover .fa-pencil{
 }
 .table-responsive input[type="search"]:focus{
   border-color:#999;
+}
+.folder_menu{
+
 }
 /* Edit Below to Customize Widths > 768px */
 @media (min-width:768px) {
@@ -426,7 +445,7 @@ a:hover .fa-pencil{
   .navbar-collapse .search form{
     padding:0;
   }
-  .dropdown-toggle.fotos i+i{
+  .side-nav .dropdown-toggle i+i{
     margin-right:0;
   }
   /* Nav Messages */
