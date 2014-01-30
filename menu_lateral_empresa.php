@@ -34,6 +34,7 @@
                     </ul>
                   </div>
                   <i class="fa fa-sort-asc"></i>
+                  
                 </div>
             </a>
               <ul class="dropdown-menu">
